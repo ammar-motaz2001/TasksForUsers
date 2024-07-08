@@ -4,7 +4,7 @@ import { userModel } from "../../database/models/user.model.js"
 import { catchError } from "../../middleware/catchError.js"
 import {AppError } from "../../utils/appError.js"
 const addTask=catchError(async(req,res)=>{
-    let task=await taskModel.create(req.body) // add task to database
+    let task=await taskModel.bulkCreate([req.body]) // add task to database
     return res.json({message:"success",task})
 })
 const getAllTasks=catchError(async(req,res)=>{
@@ -32,14 +32,14 @@ const getAllTasks=catchError(async(req,res)=>{
  })
 
  const getSingleTask=catchError(async(req,res,next)=>{
-    let singleTask=await taskModel.findByPk(req.params.id)
+    let singleTask=await taskModel.findByPk(req.params.id) //find a task with primaryKey 
     if(singleTask) return res.json({message:"success",singleTask})
         return next(new AppError("Task Not Found",404))
  })
 
  const deleteTask=catchError(async(req,res,next)=>{
     let created=await taskModel.destroy({
-        where:{
+        where:{ //where==IF ,, if id == req.params.id delete the task
             id:req.params.id
         }
     })
