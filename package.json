@@ -7,7 +7,7 @@
     "start":"node server.js"
   },
   "engines": {
-    "node":"v20.7.3"
+    "node":"v21.7.3"
   },
   "keywords": [],
   "author": "",
