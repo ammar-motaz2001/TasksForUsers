@@ -1,5 +1,5 @@
-process.on("uncaughtException",()=>{
-    console.log("error in code")
+process.on("uncaughtException",(err)=>{
+    console.log("error in code",err)
 })
 import express from 'express'
 import dbConnection from './database/dbConnection.js'
