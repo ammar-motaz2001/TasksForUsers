@@ -13,7 +13,7 @@ DB_NAME='bxtahtqtgwm9jkjptlo7'
 DB_USERNAME='uxucpekdpgaqdt6m'
 DB_PASSWORD='gbr5QLAcHeDel3gQuYty'
 Create TABLE Tasks and Users
- I used Sequalize (ORM) So don't need to access ForeignKey becouse Sequalize do it .
+I used Sequalize (ORM) So don't need to access ForeignKey becouse Sequalize do it .
 ```
 ### Note: Knowing that I did not use process.env.DB_... to make it easier for you to read it and to easily identify the database.
 
@@ -22,7 +22,7 @@ Create TABLE Tasks and Users
  database Folder contain db_Connection and models Schema (TaskModel ,User Model) 
  Middleware 
  modules ( task Model have : task Controller ,task Router , user Model have : user controller , user Router) 
-utils ( Error Handling ) 
+ utils ( Error Handling ) 
 ```
 # 4- Expected Output For all End Points : 
 ### Sign In 
@@ -96,3 +96,67 @@ utils ( Error Handling )
     ]
 }
 ```
+### Update Tasks
+```
+{
+    "message": "updated successfully"
+}
+```
+### get Single Task 
+```
+{
+    "message": "success",
+    "singleTask": {
+        "id": 111,
+        "title": "Ammar Motaz",
+        "description": "a",
+        "status": "Pending",
+        "createdAt": "2024-07-09T13:51:48.000Z",
+        "updatedAt": "2024-07-09T13:59:23.000Z",
+        "userId": 23
+    }
+}
+```
+### Delete Task 
+```
+{
+    "message": "deleted successfully"
+}
+```
+#### Note : each End Point must have a Token On the Header
+# 5- Authentication and Autheriztion 
+ I used Jwt Token For That 
+
+# 6- Important Links 
+```
+  Server : {https://users-posts-ohu3.onrender.com}
+  PostMan: {https://documenter.getpostman.com/view/32169449/2sA3e2gV9k}
+```
+
+# 1- How to install React Project 
+```
+npx create-react-app ./ (if you want to create in current Folder)
+npm i (package_Name)
+npm start (to run server) 
+```
+# 2- Divide My project to Component 
+```
+1- Home
+2- Sign in
+3- Sign up
+4- Protected Routes
+5- Not Found Page 
+```
+# 3- Validation 
+```
+I used Yub Library and have experiences in JOI ,, both do same thing 
+```
+# 4- Authentication and Autherization 
+```
+I used JWT Decode to confirm that the token is correct 
+```
+# 5- Routing 
+```
+I used react-router-dom in this field
+```
+##### Regards  
