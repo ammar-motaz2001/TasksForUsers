@@ -35,7 +35,7 @@ const getAllTasks=catchError(async(req,res)=>{
             id:req.params.id
         }
     })
-    if(created) return res.json({message:"updated successfully"})
+    if(created) return res.json({message:"updated successfully" ,created})
     return next(new AppError("Task Not Found",404))
  })
 
