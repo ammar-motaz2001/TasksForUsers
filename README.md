@@ -7,7 +7,7 @@ npm i {package_name}
 npm i nodemon  //to save all changes continuously
 ```
 # 2- How to initilization DataBase
-1-DB_HOST='bxtahtqtgwm9jkjptlo7-mysql.services.clever-cloud.com'
+1-DB_HOST='bxtahtqtgwm9jkjptlo7-mysql.services.clever-cloud.com'/n
 2-DB_NAME='bxtahtqtgwm9jkjptlo7'
 3-DB_USERNAME='uxucpekdpgaqdt6m'
 4-DB_PASSWORD='gbr5QLAcHeDel3gQuYty'
