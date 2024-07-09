@@ -9,6 +9,7 @@ import dotenv from 'dotenv'
 import { AppError } from './utils/appError.js'
 import { globalError } from './middleware/globlError.js'
 import cors from 'cors'
+
 dotenv.config()
 const app = express()
 const port = process.env.PORT||3003
