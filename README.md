@@ -1,1 +1,1 @@
-#How to initilization DataBase
+# How to initilization DataBase
